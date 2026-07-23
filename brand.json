@@ -28,6 +28,12 @@
     "domain": "withflowforge.com",
     "email": "hello@withflowforge.com",
     "phone": "07304090660",
-    "phoneE164": "+447304090660"
+    "phoneE164": "+447304090660",
+    "address": {
+      "line1": "2 Wellfield Cottages",
+      "line2": "Linstock, Carlisle",
+      "country": "England",
+      "postcode": "CA6 4QA"
+    }
   }
 }
