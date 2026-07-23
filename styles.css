@@ -1,0 +1,202 @@
+:root {
+  --canvas: #0a0b0d;
+  --ink: #f4efe8;
+  --muted: #a79f94;
+  --accent: #e8953a;
+  --ember: #ff6a3d;
+  --steel: #6f7c8c;
+  --surface: #14161a;
+  --hairline: #2a2e35;
+  --display: "Syne", system-ui, sans-serif;
+  --body: "Public Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--body);
+}
+
+body {
+  background:
+    radial-gradient(900px 520px at 8% -8%, color-mix(in srgb, var(--ember) 28%, transparent), transparent 58%),
+    radial-gradient(700px 480px at 92% 8%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 50%),
+    linear-gradient(180deg, #12141a 0%, var(--canvas) 42%, #08090b 100%);
+}
+
+.site {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px clamp(20px, 4vw, 64px);
+  border-bottom: 1px solid color-mix(in srgb, var(--hairline) 80%, transparent);
+  animation: rise 700ms ease both;
+}
+
+.wordmark {
+  font-family: var(--display);
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  align-content: end;
+  gap: 20px;
+  padding: clamp(56px, 14vh, 140px) clamp(20px, 4vw, 64px) clamp(64px, 12vh, 110px);
+  max-width: 1120px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: auto -10% 18% auto;
+  width: min(48vw, 420px);
+  height: min(48vw, 420px);
+  border-radius: 50%;
+  background:
+    conic-gradient(from 210deg, transparent 0 55%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 100%),
+    radial-gradient(circle, color-mix(in srgb, var(--ember) 30%, transparent), transparent 68%);
+  filter: blur(8px);
+  animation: forge 4.5s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  animation: rise 700ms 40ms ease both;
+}
+
+.hero .brand {
+  position: relative;
+  font-family: var(--display);
+  font-size: clamp(56px, 12vw, 118px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  margin: 0;
+  max-width: 11ch;
+  animation: rise 800ms 90ms ease both;
+}
+
+.hero .brand span {
+  color: var(--accent);
+}
+
+.bar {
+  width: min(240px, 46vw);
+  height: 3px;
+  background: linear-gradient(90deg, var(--ember), var(--accent), transparent);
+  transform-origin: left;
+  animation: slash 900ms 180ms ease both;
+}
+
+.hero .line {
+  position: relative;
+  max-width: 36rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(17px, 2.2vw, 21px);
+  line-height: 1.5;
+  animation: rise 800ms 180ms ease both;
+}
+
+.cta-row {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  animation: rise 800ms 260ms ease both;
+}
+
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: #1a1008;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.btn:hover { transform: translateY(-1px); filter: brightness(1.06); }
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  font-weight: 600;
+}
+
+.services {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 0 clamp(20px, 4vw, 64px) 48px;
+  color: var(--steel);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  animation: rise 800ms 320ms ease both;
+}
+
+.services strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.footer {
+  padding: 18px clamp(20px, 4vw, 64px) 28px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--hairline) 80%, transparent);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slash {
+  from { opacity: 0; transform: scaleX(0.15); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes forge {
+  from { opacity: 0.55; transform: translateY(8px) scale(0.96); }
+  to { opacity: 0.95; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

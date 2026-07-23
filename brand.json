@@ -1,0 +1,33 @@
+{
+  "brief": {
+    "businessName": "Flow Forge",
+    "industry": "agency",
+    "tagline": "Business automation and websites that keep companies moving.",
+    "audience": "business owners who need systems and sites",
+    "notes": "business automation and websites for businesses",
+    "domain": "withflowforge.com"
+  },
+  "brand": {
+    "name": "Flow Forge",
+    "tagline": "Automation under the hood, a sharp site out front.",
+    "industry": "agency",
+    "palette": {
+      "canvas": "#0a0b0d",
+      "ink": "#f4efe8",
+      "muted": "#a79f94",
+      "accent": "#e8953a",
+      "ember": "#ff6a3d",
+      "steel": "#6f7c8c"
+    },
+    "fonts": {
+      "display": "Syne",
+      "body": "Public Sans"
+    },
+    "signature": "Molten amber forge glow on charcoal steel",
+    "layout": "Brand-first billboard with heat atmosphere",
+    "domain": "withflowforge.com",
+    "email": "hello@withflowforge.com",
+    "phone": "07304090660",
+    "phoneE164": "+447304090660"
+  }
+}
