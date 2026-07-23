@@ -38,6 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   padding: 22px clamp(20px, 4vw, 64px);
   border-bottom: 1px solid color-mix(in srgb, var(--hairline) 80%, transparent);
   animation: rise 700ms ease both;
@@ -51,18 +52,26 @@ body {
   font-weight: 700;
 }
 
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
 .nav a {
   color: var(--muted);
   text-decoration: none;
   font-size: 14px;
 }
 
+.nav a:hover { color: var(--ink); }
+
 .hero {
   position: relative;
   display: grid;
   align-content: end;
   gap: 20px;
-  padding: clamp(56px, 14vh, 140px) clamp(20px, 4vw, 64px) clamp(64px, 12vh, 110px);
+  padding: clamp(56px, 14vh, 140px) clamp(20px, 4vw, 64px) clamp(48px, 8vh, 88px);
   max-width: 1120px;
   overflow: hidden;
 }
@@ -88,6 +97,7 @@ body {
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
+  margin: 0;
   animation: rise 700ms 40ms ease both;
 }
 
@@ -103,9 +113,7 @@ body {
   animation: rise 800ms 90ms ease both;
 }
 
-.hero .brand span {
-  color: var(--accent);
-}
+.hero .brand span { color: var(--accent); }
 
 .bar {
   width: min(240px, 46vw);
@@ -158,22 +166,75 @@ body {
   font-weight: 600;
 }
 
-.services {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  padding: 0 clamp(20px, 4vw, 64px) 48px;
-  color: var(--steel);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  animation: rise 800ms 320ms ease both;
+.services-section {
+  padding: 24px clamp(20px, 4vw, 64px) 72px;
+  border-top: 1px solid color-mix(in srgb, var(--hairline) 80%, transparent);
+  animation: rise 800ms 300ms ease both;
 }
 
-.services strong {
-  color: var(--ink);
-  font-weight: 600;
+.section-head {
+  max-width: 40rem;
+  margin-bottom: 28px;
+  display: grid;
+  gap: 10px;
 }
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.section-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 40px;
+}
+
+@media (max-width: 760px) {
+  .service-list { grid-template-columns: 1fr; }
+}
+
+.service {
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+}
+
+.service h3 {
+  margin: 0 0 10px;
+  font-family: var(--display);
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.service p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+.service ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.service li { margin-bottom: 4px; color: var(--steel); }
+.service li::marker { color: var(--accent); }
 
 .footer {
   padding: 18px clamp(20px, 4vw, 64px) 28px;
