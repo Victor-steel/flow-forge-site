@@ -3,7 +3,7 @@
 Marketing site for Flow Forge — business automation and websites for businesses.
 
 - Planned domain: [withflowforge.com](https://withflowforge.com)
-- Email: hello@withflowforge.com
+- Email: buildwithflowforge@gmail.com
 - Phone: 07304 090660
 
 ## Preview locally
