@@ -3,8 +3,7 @@
 ## Packages (locked)
 | Package | Price | Scope |
 |--------|------:|-------|
-| Spark | £497 | 1-page site, brand polish, contact, go-live |
-| Forge | £997 | Up to 5 pages + chatbot + basic SEO |
+| Forge | £497 | 1–5 page site + chatbot + basic SEO + go-live |
 | Foundry | £1,797 | Forge + lead handoff automation + 30 days tweaks |
 
 Care plan: £49/month (hosting + small edits).
@@ -15,7 +14,7 @@ Revisions: 2 rounds included. Extra rounds billed.
 1. What do you sell / who buys?
 2. What should the site make people do (call, email, book)?
 3. Have logo/colours/photos? Domain?
-4. Recommend Spark / Forge / Foundry — don’t invent custom scope on call 1.
+4. Recommend **Forge** (£497) by default; **Foundry** if they want lead follow-up automation.
 5. Send deposit invoice same day.
 
 ## Build checklist
@@ -25,8 +24,8 @@ Revisions: 2 rounds included. Extra rounds billed.
 - [ ] Revision round 1
 - [ ] Revision round 2 (if needed)
 - [ ] Domain DNS pointed / live URL
-- [ ] Chatbot live (Forge/Foundry)
-- [ ] Automation live (Foundry)
+- [ ] Chatbot live
+- [ ] Automation live (Foundry only)
 - [ ] Final invoice paid
 - [ ] Handover: URL, how to request edits, care plan offer
 
