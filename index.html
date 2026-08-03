@@ -3,219 +3,426 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flow Forge — Business Automation &amp; Websites | Carlisle</title>
-  <meta name="description" content="Flow Forge helps UK businesses with automation and website building. Based in Carlisle. Call 07304 090660." />
-  <meta name="theme-color" content="#0a0b0d" />
+  <title>Flow Forge — Websites &amp; Business Automation | Carlisle</title>
+  <meta name="description" content="Flow Forge builds websites and business automation for UK small businesses. Fixed prices from £497. Based in Carlisle. Call 07304 090660." />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://withflowforge.com/" />
-  <meta property="og:title" content="Flow Forge — Business Automation & Websites" />
-  <meta property="og:description" content="Automation under the hood. A sharp website out front. Based in Carlisle." />
+  <meta property="og:title" content="Flow Forge — Websites &amp; Business Automation" />
+  <meta property="og:description" content="Fixed-price websites and automation for UK small businesses. From £497. Based in Carlisle." />
   <meta property="og:url" content="https://withflowforge.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <meta property="og:image" content="https://withflowforge.com/assets/logo-flowforge.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=9" />
 </head>
 <body>
-  <div class="site">
-    <header class="nav">
-      <a class="wordmark" href="#top">Flow Forge</a>
-      <nav class="nav-links" aria-label="Primary">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="wordmark" href="#top">
+        <img
+          class="wordmark__mark"
+          src="./assets/logo-mark.png"
+          alt=""
+          width="256"
+          height="256"
+        />
+        <span>
+          Flow Forge
+          <span class="wordmark__rule" aria-hidden="true"></span>
+        </span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
         <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
-        <a href="#process">How it works</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-phone" href="tel:+447304090660">07304 090660</a>
+        <a href="#packages">Prices</a>
+        <a href="#faq">FAQ</a>
       </nav>
-    </header>
+      <a class="nav__phone" href="tel:+447304090660">07304 090660</a>
+    </div>
+  </header>
 
-    <main id="top">
-      <section class="hero">
-        <p class="kicker">Carlisle · UK small businesses</p>
-        <h1 class="brand">Flow <span>Forge</span></h1>
-        <div class="bar" aria-hidden="true"></div>
-        <p class="line">
-          Business automation and websites for owners who want fewer manual tasks
-          and more enquiries.
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">Carlisle · working with businesses across the UK</p>
+        <h1>
+          Websites and automation for small businesses that would rather be
+          doing the actual work.
+        </h1>
+        <div class="hero__row">
+          <p class="hero__lede">
+            A clear site that brings you enquiries, and the boring admin behind it
+            handled automatically. A fixed build price, £20 a month to keep it
+            looked after, and you own everything at the end.
+          </p>
+          <div class="actions">
+            <a class="btn" href="tel:+447304090660">Call 07304 090660</a>
+            <a class="btn btn--secondary" href="#packages">See prices</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec">
+        <dl class="spec__inner">
+          <div>
+            <dt>Build, from</dt>
+            <dd>£497</dd>
+          </div>
+          <div>
+            <dt>Maintenance</dt>
+            <dd>£20 a month</dd>
+          </div>
+          <div>
+            <dt>Payment</dt>
+            <dd>50% up front</dd>
+          </div>
+          <div>
+            <dt>Ownership</dt>
+            <dd>Your domain, yours</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <p class="eyebrow">Work</p>
+        <h2>Sample builds</h2>
+        <p class="section__lede">
+          Two sites built to show what the Forge package looks like in practice.
+          Both are demonstration builds rather than live customer sites — I'd
+          rather show you something honest than borrow someone else's work.
         </p>
-        <div class="cta-row">
-          <a class="btn" href="tel:+447304090660">Call 07304 090660</a>
-          <a class="btn ghost" href="mailto:buildwithflowforge@gmail.com">Email us</a>
-          <a class="btn ghost" href="#packages">See packages</a>
-        </div>
-      </section>
 
-      <section class="services-section" id="services">
-        <div class="section-head">
-          <p class="kicker">Services</p>
-          <h2>What we forge</h2>
-          <p class="section-line">
-            Two clear offers. Use one, or both — built around how your business
-            actually runs.
-          </p>
-        </div>
+        <div class="work">
+          <article class="work__item">
+            <a href="./demos/beckside-landscapes/">
+              <img
+                src="./assets/work/beckside-landscapes.jpg"
+                alt="Beckside Landscapes sample site — homepage headed &quot;Gardens that hold up to a Cumbrian winter&quot; with a site-visit button"
+                width="1280"
+                height="860"
+                loading="lazy"
+              />
+            </a>
+            <div class="work__meta">
+              <h3>Beckside Landscapes</h3>
+              <p class="work__type">Landscaping · sample Forge build</p>
+              <p>
+                Garden design and grounds care, with honest cost bands, a project
+                gallery, and one obvious way to book a site visit.
+              </p>
+              <a class="link" href="./demos/beckside-landscapes/">View the build</a>
+            </div>
+          </article>
 
-        <div class="service-list">
-          <article class="service">
-            <h3>Business automation</h3>
+          <article class="work__item">
+            <img
+              src="./assets/work/rr-plumbing.jpg"
+              alt="RR Plumbing &amp; Gas sample site — black homepage with a boiler and flame image and an orange call to action"
+              width="1280"
+              height="860"
+              loading="lazy"
+            />
+            <div class="work__meta">
+              <h3>RR Plumbing &amp; Gas</h3>
+              <p class="work__type">Plumbing &amp; heating · in progress</p>
+              <p>
+                Built to the owner's own branding, with a photo gallery and text
+                the owner edits himself — no developer needed.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="services">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h2>Two things, done properly</h2>
+
+        <div class="tiles">
+          <article class="tile">
+            <h3>Websites</h3>
             <p>
-              Stop repeating the same admin every week. We connect your tools and
-              set up flows that chase leads, send reminders, and keep work moving
-              without you babysitting every step.
+              A site that answers the questions customers actually ask — what you
+              do, where you cover, what it costs, how to reach you — and loads
+              fast on a phone.
             </p>
             <ul>
-              <li>Website or form leads into your CRM or inbox</li>
-              <li>Follow-ups, bookings, and status updates</li>
-              <li>Handoffs between sales, ops, and support</li>
-              <li>Workflows tailored to your current tools</li>
+              <li>1–5 pages, mobile first</li>
+              <li>Your branding, your words tidied up</li>
+              <li>Phone, email and enquiry form</li>
+              <li>Basic SEO so you turn up locally</li>
+              <li>You edit the text and photos yourself</li>
             </ul>
           </article>
 
-          <article class="service">
-            <h3>Website building</h3>
+          <article class="tile">
+            <h3>Automation</h3>
             <p>
-              A clear site that matches your brand and turns visitors into
-              enquiries — fast, mobile-ready, and built to get you more calls
-              and bookings.
+              The repetitive admin you do every week, handled without you. Leads
+              land where you'll see them, follow-ups go out on their own, and
+              nothing sits forgotten in an inbox.
             </p>
             <ul>
-              <li>Landing pages and full business websites</li>
-              <li>Strong calls to action and easy contact</li>
-              <li>Phone, email, and booking-ready pages</li>
-              <li>Simple handover, or ongoing support if you want it</li>
+              <li>Enquiries into your inbox or CRM</li>
+              <li>Automatic follow-ups and reminders</li>
+              <li>Quote and booking chasers</li>
+              <li>Built around the tools you already use</li>
             </ul>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="packages" id="packages">
-        <div class="section-head">
-          <p class="kicker">Packages</p>
-          <h2>Clear prices. No fog.</h2>
-          <p class="section-line">
-            Fixed packages for UK small businesses. 50% to start, 50% on go-live.
-            Two revision rounds included.
-          </p>
-        </div>
+    <section class="section" id="packages">
+      <div class="wrap">
+        <p class="eyebrow">Prices</p>
+        <h2>Clear prices. No fog.</h2>
+        <p class="section__lede">
+          Fixed cost agreed before anything starts. 50% to begin, 50% when it goes
+          live. Two revision rounds either way.
+        </p>
 
-        <div class="package-list">
-          <article class="package featured">
-            <p class="package-tag">Website</p>
+        <div class="plans">
+          <article class="plan plan--featured">
+            <p class="plan__tag">Most popular</p>
             <h3>Forge</h3>
-            <p class="package-price">£497</p>
-            <p class="package-blurb">
-              A clear small-business site with chatbot — built to get calls and emails,
-              not sit pretty.
+            <p class="plan__price">£497<span>one-off</span></p>
+            <p class="plan__recurring">then £20 a month for maintenance</p>
+            <p class="plan__blurb">
+              A complete small-business website, built to get you calls and
+              emails.
             </p>
             <ul>
-              <li>1–5 pages (mobile-ready)</li>
-              <li>Your branding + copy polish</li>
-              <li>Phone, email, map, and clear CTAs</li>
-              <li>On-site chatbot (your business voice)</li>
-              <li>Basic SEO + live on your domain</li>
-              <li>2 revision rounds + handover</li>
+              <li>1–5 pages, mobile ready</li>
+              <li>Your branding and copy polish</li>
+              <li>Clear calls to action throughout</li>
+              <li>On-site chatbot in your voice</li>
+              <li>Basic SEO, live on your domain</li>
+              <li>Edit your own text and photos</li>
+              <li>2 revision rounds and handover</li>
+              <li>Hosting, updates and small fixes</li>
             </ul>
-            <a class="btn" href="mailto:buildwithflowforge@gmail.com?subject=Forge%20website%20(£497)">Choose Forge</a>
+            <a class="btn" href="mailto:buildwithflowforge@gmail.com?subject=Forge%20website%20(%C2%A3497)">Enquire about Forge</a>
           </article>
 
-          <article class="package">
-            <p class="package-tag">Growth</p>
+          <article class="plan">
+            <p class="plan__tag">Website plus automation</p>
             <h3>Foundry</h3>
-            <p class="package-price">£1,797</p>
-            <p class="package-blurb">
-              Website, chatbot, and light automation so leads don’t die in your inbox.
+            <p class="plan__price">£1,797<span>one-off</span></p>
+            <p class="plan__recurring">then £49 a month for the care plan</p>
+            <p class="plan__blurb">
+              Everything in Forge, plus the automation so enquiries stop dying in
+              your inbox.
             </p>
             <ul>
               <li>Everything in Forge</li>
-              <li>Lead capture → email/CRM handoff</li>
-              <li>Auto follow-up or reminder flow</li>
-              <li>30 days tweak support after launch</li>
-              <li>Optional care plan after that</li>
+              <li>Lead capture into email or CRM</li>
+              <li>Automatic follow-up or reminder flow</li>
+              <li>30 days of tweaks after launch</li>
+              <li>Hosting, updates and small fixes</li>
+              <li>Automation kept running and monitored</li>
             </ul>
-            <a class="btn" href="mailto:buildwithflowforge@gmail.com?subject=Foundry%20package%20(£1797)">Choose Foundry</a>
+            <a class="btn btn--secondary" href="mailto:buildwithflowforge@gmail.com?subject=Foundry%20package%20(%C2%A31797)">Enquire about Foundry</a>
           </article>
         </div>
 
-        <p class="package-note">
-          Care plan (hosting + small edits): <strong>£49/month</strong> after launch.
-          Domain &amp; hosting setup included on all packages.
-          <a class="map-link" href="./demos/eden-valley-roofing/">See a sample Forge site →</a>
+        <p class="note">
+          The <strong>£20 a month</strong> on Forge covers hosting, updates and
+          small fixes, and keeps the site looked after rather than left to rot.
+          Foundry's care plan is <strong>£49 a month</strong> because it also
+          covers the automation. Domain and hosting setup is included in both.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <section class="process" id="process">
-        <div class="section-head">
-          <p class="kicker">How it works</p>
-          <h2>From chat to live</h2>
-          <p class="section-line">A straight path — no jargon maze.</p>
-        </div>
+    <section class="section section--tint" id="process">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2>From first call to live</h2>
+
         <ol class="steps">
           <li>
-            <strong>Discovery call</strong>
-            <span>We learn what you sell, where time gets wasted, and what “done” looks like.</span>
+            <span class="steps__num">01</span>
+            <h3>A proper conversation</h3>
+            <p>
+              What you sell, who you sell it to, and where your time disappears.
+              Usually twenty minutes on the phone.
+            </p>
           </li>
           <li>
-            <strong>Build</strong>
-            <span>We forge the automation, the website, or both — and show you progress as we go.</span>
+            <span class="steps__num">02</span>
+            <h3>Build, with progress you can see</h3>
+            <p>
+              You get a link to the work as it happens, so nothing is a surprise
+              at the end. Two rounds of changes are included.
+            </p>
           </li>
           <li>
-            <strong>Handover</strong>
-            <span>You get a working system, clear next steps, and support if you want to keep improving.</span>
+            <span class="steps__num">03</span>
+            <h3>Live, and handed over</h3>
+            <p>
+              It goes live on your domain, you get shown how to edit it, and the
+              accounts are in your name — not mine.
+            </p>
           </li>
         </ol>
-      </section>
+      </div>
+    </section>
 
-      <section class="contact" id="contact">
-        <div class="section-head">
-          <p class="kicker">Contact</p>
-          <h2>Let’s talk</h2>
-          <p class="section-line">
-            Based in Carlisle. Happy to help businesses across the UK.
-            Same-day replies where we can.
-          </p>
+    <section class="section" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">Questions</p>
+        <h2>The things people ask first</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Who owns the website afterwards?</summary>
+            <p>
+              You do — the domain, the hosting account and the site itself are all
+              in your name. If you ever want to move to someone else, nothing is
+              locked to me.
+            </p>
+          </details>
+          <details>
+            <summary>Do I need to be good with computers?</summary>
+            <p>
+              No. Editing your text and photos works a bit like filling in a form,
+              and I'll walk you through it once it's live. If you'd rather I made
+              the changes, the care plan covers that.
+            </p>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <p>
+              It depends on how quickly I get your details and photos, which is
+              usually the slow part rather than the building. I'll give you a
+              realistic date on our first call rather than a sales promise here.
+            </p>
+          </details>
+          <details>
+            <summary>Is there a monthly fee?</summary>
+            <p>
+              Yes — £20 a month on a Forge site, on top of the one-off build cost.
+              That covers hosting, keeping things updated, and small fixes when you
+              need them. Foundry is £49 a month because the automation needs
+              looking after too. Nothing is on a long contract.
+            </p>
+          </details>
+          <details>
+            <summary>Can you just do the automation, without a website?</summary>
+            <p>
+              Yes. If your site is fine and it's the admin that's the problem, ring
+              and describe what you're repeating every week and I'll tell you
+              whether it's worth automating.
+            </p>
+          </details>
+          <details>
+            <summary>What if I don't like it?</summary>
+            <p>
+              That's what the two revision rounds are for, and why you see progress
+              as it's built rather than a reveal at the end. If it isn't right,
+              we keep working until it is.
+            </p>
+          </details>
         </div>
+      </div>
+    </section>
 
-        <div class="contact-grid">
-          <div class="contact-block">
+    <section class="section section--contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell me what you need</h2>
+        <p class="section__lede">
+          Based in Carlisle, working with businesses across the UK. I reply the
+          same day where I can.
+        </p>
+
+        <div class="contact">
+          <div class="contact__block">
             <h3>Phone</h3>
-            <a href="tel:+447304090660">07304 090660</a>
+            <a class="link link--lg" href="tel:+447304090660">07304 090660</a>
           </div>
-          <div class="contact-block">
+          <div class="contact__block">
             <h3>Email</h3>
-            <a href="mailto:buildwithflowforge@gmail.com">buildwithflowforge@gmail.com</a>
+            <a class="link link--lg" href="mailto:buildwithflowforge@gmail.com">buildwithflowforge@gmail.com</a>
           </div>
-          <div class="contact-block">
-            <h3>Address</h3>
+          <div class="contact__block">
+            <h3>Where</h3>
             <p>
               2 Wellfield Cottages<br />
               Linstock, Carlisle<br />
               England, CA6 4QA
             </p>
-            <a class="map-link" href="https://maps.google.com/?q=2+Wellfield+Cottages,+Linstock,+Carlisle,+CA6+4QA" target="_blank" rel="noreferrer">Open in Google Maps</a>
+            <a class="link" href="https://maps.google.com/?q=2+Wellfield+Cottages,+Linstock,+Carlisle,+CA6+4QA" target="_blank" rel="noreferrer">Open in Google Maps</a>
           </div>
         </div>
 
-        <div class="cta-row contact-cta">
+        <div class="actions">
           <a class="btn" href="tel:+447304090660">Call now</a>
-          <a class="btn ghost" href="mailto:buildwithflowforge@gmail.com?subject=Flow%20Forge%20enquiry">Send an enquiry</a>
+          <a class="btn btn--secondary" href="mailto:buildwithflowforge@gmail.com?subject=Flow%20Forge%20enquiry">Send an enquiry</a>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-brand">Flow Forge</div>
-      <div class="footer-meta">
-        withflowforge.com · Carlisle, England · Business automation &amp; website building
       </div>
-    </footer>
-  </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <img
+          class="footer__logo"
+          src="./assets/logo-flowforge.png"
+          alt="Flow Forge — websites, automation, growth"
+          width="1024"
+          height="1024"
+          loading="lazy"
+        />
+        <p class="footer__meta">Carlisle, England</p>
+      </div>
+      <div class="footer__links">
+        <a href="tel:+447304090660">07304 090660</a>
+        <a href="mailto:buildwithflowforge@gmail.com">buildwithflowforge@gmail.com</a>
+        <a href="https://withflowforge.com/">withflowforge.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Flow Forge",
+      "description": "Websites and business automation for UK small businesses.",
+      "url": "https://withflowforge.com/",
+      "telephone": "+447304090660",
+      "email": "buildwithflowforge@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Wellfield Cottages",
+        "addressLocality": "Linstock, Carlisle",
+        "addressRegion": "England",
+        "postalCode": "CA6 4QA",
+        "addressCountry": "GB"
+      },
+      "areaServed": "United Kingdom",
+      "priceRange": "££"
+    }
+  </script>
 
   <script
     src="https://website-chatbot-production-bdd1.up.railway.app/widget.js?v=4"
     data-bot-name="Flow Forge"
-    data-accent="#c4a35a"
+    data-accent="#f0c000"
   ></script>
 </body>
 </html>
