@@ -17,17 +17,31 @@ Revisions: 2 rounds included. Extra rounds billed.
 4. Recommend **Forge** (£497) by default; **Foundry** if they want lead follow-up automation.
 5. Send deposit invoice same day.
 
+## Client ownership (locked)
+Forge sites ship so the customer can **edit text and photos themselves**:
+
+- Template: `~/Projects/forge-client-template` (Eleventy + Decap CMS)
+- Hosting: **client’s Netlify** account
+- Editor: `yoursite.com/admin` (Netlify Identity invite)
+- Domain: client’s registrar → Netlify
+- Handover doc: `HANDOVER.md` in the client repo
+
+You keep design/layout changes; they keep day-to-day copy and gallery updates.
+
 ## Build checklist
 - [ ] Deposit received
 - [ ] Brief saved (business name, offer, phone, email, address, brand notes)
+- [ ] Clone `forge-client-template` → fill `site.json` / brand CSS
 - [ ] Draft preview shared
 - [ ] Revision round 1
 - [ ] Revision round 2 (if needed)
+- [ ] GitHub repo + Netlify on **client** account
+- [ ] Identity + Git Gateway enabled; client invited to `/admin`
 - [ ] Domain DNS pointed / live URL
-- [ ] Chatbot live
+- [ ] Chatbot live (if included)
 - [ ] Automation live (Foundry only)
 - [ ] Final invoice paid
-- [ ] Handover: URL, how to request edits, care plan offer
+- [ ] Handover: `HANDOVER.md` + care plan offer
 
 ## Out of scope (unless paid extra)
 - Custom app/software builds
