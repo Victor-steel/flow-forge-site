@@ -4,21 +4,22 @@
 */
 
 :root {
-  --canvas: #121417;
-  --surface: #181b20;
-  --surface-steel: #1e2228;
-  --ink: #f2f3f5;
-  --ink-soft: #d5d8de;
-  --muted: #9aa1ab;
-  --hairline: rgba(242, 243, 245, 0.12);
-  --forge: #121417;
-  --amber: #d4892e;
-  --ember: #b87424;
-  --amber-ink: #121417;
-  --gold-text: #d4892e;
-  --inverse: #f2f3f5;
-  --inverse-muted: #a8afb8;
-  --box: #22262d;
+  /* Logo-true palette: charcoal ground, cream type, amber / ember flame */
+  --canvas: #0a0b0d;
+  --surface: #12141a;
+  --surface-steel: #181a22;
+  --ink: #f4efe8;
+  --ink-soft: #e8e2d8;
+  --muted: #c2bbb0;
+  --hairline: rgba(244, 239, 232, 0.16);
+  --forge: #0a0b0d;
+  --amber: #e8953a;
+  --ember: #ff6a3d;
+  --amber-ink: #0a0b0d;
+  --gold-text: #e8953a;
+  --inverse: #f4efe8;
+  --inverse-muted: #c2bbb0;
+  --box: #1c1e26;
 
   --display: Syne, "Avenir Next", system-ui, sans-serif;
   --sans: "Public Sans", system-ui, -apple-system, sans-serif;
@@ -164,7 +165,7 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(18, 20, 23, 0.94);
+  background: rgba(10, 11, 13, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--hairline);
 }
@@ -302,8 +303,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 55% 45% at 90% 10%, rgba(212, 137, 46, 0.12), transparent 55%),
-    linear-gradient(180deg, #16191e 0%, var(--canvas) 70%);
+    radial-gradient(ellipse 55% 45% at 90% 10%, rgba(232, 149, 58, 0.14), transparent 55%),
+    linear-gradient(180deg, #101218 0%, var(--canvas) 70%);
   pointer-events: none;
 }
 
@@ -372,15 +373,19 @@ h3 {
 }
 
 .hero__mark {
-  display: none;
-  justify-self: end;
-  width: min(100%, 16rem);
-  opacity: 0.92;
+  display: block;
+  justify-self: start;
+  width: min(42vw, 11rem);
+  margin-top: 0.5rem;
   animation: settle 1.2s var(--ease) both;
 }
 
 @media (min-width: 900px) {
-  .hero__mark { display: block; }
+  .hero__mark {
+    justify-self: end;
+    width: min(100%, 18rem);
+    margin-top: 0;
+  }
 }
 
 .hero__mark img {
@@ -684,7 +689,7 @@ h3 {
 }
 
 .plan--featured {
-  border-color: rgba(242, 243, 245, 0.22);
+  border-color: rgba(244, 239, 232, 0.22);
   background: var(--box);
   box-shadow: none;
 }
