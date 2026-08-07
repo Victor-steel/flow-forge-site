@@ -1,24 +1,24 @@
 /*
-  Flow Forge — logo-led forge system
-  Warm charcoal (not void black) with amber heat. Syne / Public Sans.
+  Flow Forge — serious logo-led system
+  Cool charcoal + restrained amber. Syne / Public Sans. Minimal glow.
 */
 
 :root {
-  --canvas: #1a1816;
-  --surface: #24211e;
-  --surface-steel: #2c2925;
-  --ink: #faf6f0;
-  --ink-soft: #e4ddd3;
-  --muted: #b4aaa0;
-  --hairline: rgba(250, 246, 240, 0.14);
-  --forge: #1a1816;
-  --amber: #e8953a;
-  --ember: #ff6a3d;
-  --amber-ink: #1a1816;
-  --gold-text: #f0b35a;
-  --inverse: #faf6f0;
-  --inverse-muted: #c8bfb4;
-  --box: #2f2c28;
+  --canvas: #121417;
+  --surface: #181b20;
+  --surface-steel: #1e2228;
+  --ink: #f2f3f5;
+  --ink-soft: #d5d8de;
+  --muted: #9aa1ab;
+  --hairline: rgba(242, 243, 245, 0.12);
+  --forge: #121417;
+  --amber: #d4892e;
+  --ember: #b87424;
+  --amber-ink: #121417;
+  --gold-text: #d4892e;
+  --inverse: #f2f3f5;
+  --inverse-muted: #a8afb8;
+  --box: #22262d;
 
   --display: Syne, "Avenir Next", system-ui, sans-serif;
   --sans: "Public Sans", system-ui, -apple-system, sans-serif;
@@ -164,8 +164,8 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(26, 24, 22, 0.9);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 20, 23, 0.94);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -272,7 +272,7 @@ h3 {
 .btn:hover {
   background: var(--ember);
   border-color: var(--ember);
-  color: #fff;
+  color: var(--ink);
 }
 
 .btn:active {
@@ -302,10 +302,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 88% 12%, rgba(232, 149, 58, 0.32), transparent 58%),
-    radial-gradient(ellipse 55% 45% at 12% 90%, rgba(255, 106, 61, 0.16), transparent 55%),
-    radial-gradient(ellipse 40% 30% at 40% 40%, rgba(240, 179, 90, 0.08), transparent 50%),
-    linear-gradient(180deg, #221e1a 0%, var(--canvas) 55%, var(--canvas) 100%);
+    radial-gradient(ellipse 55% 45% at 90% 10%, rgba(212, 137, 46, 0.12), transparent 55%),
+    linear-gradient(180deg, #16191e 0%, var(--canvas) 70%);
   pointer-events: none;
 }
 
@@ -336,10 +334,10 @@ h3 {
   flex-direction: column;
   margin: 0;
   font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(3.2rem, 9vw, 6.5rem);
-  line-height: 0.92;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: clamp(2.85rem, 7.5vw, 5.25rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink);
   max-width: none;
@@ -351,14 +349,14 @@ h3 {
 }
 
 .hero__headline {
-  margin: 1.25rem 0 0;
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
-  line-height: 1.25;
-  letter-spacing: -0.025em;
+  margin: 1.35rem 0 0;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   color: var(--ink-soft);
-  max-width: 28ch;
+  max-width: 34ch;
   animation: rise 900ms var(--ease) 80ms both;
 }
 
@@ -376,15 +374,9 @@ h3 {
 .hero__mark {
   display: none;
   justify-self: end;
-  width: min(100%, 20rem);
+  width: min(100%, 16rem);
+  opacity: 0.92;
   animation: settle 1.2s var(--ease) both;
-  /* Soft amber bloom behind the flame — not a hard plate */
-  background: radial-gradient(
-    circle at 50% 55%,
-    rgba(232, 149, 58, 0.34) 0%,
-    rgba(232, 149, 58, 0.1) 42%,
-    transparent 68%
-  );
 }
 
 @media (min-width: 900px) {
@@ -484,9 +476,7 @@ h3 {
 }
 
 #work ~ .section.section--contact {
-  background:
-    radial-gradient(ellipse 70% 55% at 0% 100%, rgba(232, 149, 58, 0.2), transparent 55%),
-    var(--canvas);
+  background: var(--canvas);
 }
 
 #work .work__item,
@@ -696,9 +686,9 @@ h3 {
 }
 
 .plan--featured {
-  border-color: var(--amber);
-  background: var(--surface-steel);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  border-color: rgba(242, 243, 245, 0.22);
+  background: var(--box);
+  box-shadow: none;
 }
 
 .plan__tag {

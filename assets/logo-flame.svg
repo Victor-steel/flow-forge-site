@@ -2,11 +2,11 @@
   <!-- Flame mark only  no plate/box, so it sits on the page canvas -->
   <path
     d="M36 102c22-6 34-28 40-50 6 22 16 44 40 50-22 6-34 22-40 44-6-22-18-38-40-44Z"
-    fill="#e8953a"
+    fill="#d4892e"
   />
   <path
     d="M64 86c10-4 16-14 18-26 2 12 8 22 18 26-10 4-14 12-18 24-4-12-8-20-18-24Z"
-    fill="#ff6a3d"
+    fill="#b87424"
   />
-  <circle cx="82" cy="62" r="7" fill="#f4efe8" opacity="0.9"/>
+  <circle cx="82" cy="62" r="7" fill="#f2f3f5" opacity="0.85"/>
 </svg>
