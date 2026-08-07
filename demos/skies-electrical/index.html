@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skies Electrical — Carlisle &amp; Cumbria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- BMW Type Next substitute: Inter 300/400/700 per awesome-design-md/design-md/bmw/DESIGN.md -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Logo-inspired: full carbon canvas + sky cyan + white */
+      --primary: #57b9dc;
+      --primary-active: #3aa3c9;
+      --primary-deep: #2a8fb0;
+      --ink: #ffffff;
+      --body: #c6c8d0;
+      --body-strong: #ffffff;
+      --muted: #9a9cac;
+      --muted-soft: #7a7c8a;
+      --hairline: rgba(255, 255, 255, 0.12);
+      --hairline-strong: rgba(255, 255, 255, 0.22);
+      --canvas: #1a1b22;
+      --surface-soft: #1a1b22;
+      --surface-card: #22232d;
+      --surface-strong: #2a2b36;
+      --surface-dark: #1a1b22;
+      --surface-dark-elevated: #22232d;
+      --on-primary: #1e1f28;
+      --on-dark: #ffffff;
+      --on-dark-soft: #c6c8d0;
+      --carbon: #1a1b22;
+      --accent-on-dark: #79b2c6;
+      --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --section: 80px;
+      --gutter: clamp(1.25rem, 4vw, 2.5rem);
+      --max: 90rem;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--body);
+      background: var(--carbon);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+    summary { cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+
+    .wrap {
+      width: min(100% - var(--gutter) * 2, var(--max));
+      margin-inline: auto;
+    }
+
+    /* —— Nav (carbon full-width strip) —— */
+    .nav {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 100%;
+      height: 3.75rem;
+      padding-inline: var(--gutter);
+      color: var(--on-dark);
+      background: var(--carbon);
+    }
+
+    .nav__brand img { height: 2.25rem; width: auto; }
+
+    .nav__links {
+      display: none;
+      gap: 1.35rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+    .nav__links a { color: var(--on-dark-soft); transition: color 160ms ease; }
+    .nav__links a:hover,
+    .nav__links a:focus-visible { color: var(--on-dark); }
+
+    .nav__call {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .nav__call:hover { color: #d0d7e0; }
+
+    @media (min-width: 900px) {
+      .nav__links { display: flex; }
+    }
+
+    /* —— Buttons —— */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 0;
+      transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+    .btn--primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn--primary:hover { background: var(--primary-active); }
+    .btn--ghost {
+      background: transparent;
+      color: var(--on-dark);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+    }
+    .btn--ghost:hover {
+      border-color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .btn--outline {
+      background: transparent;
+      color: var(--on-dark);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      min-height: 2.5rem;
+      padding: 0.6rem 0.9rem;
+    }
+    .btn--outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+      color: var(--on-dark);
+    }
+    .btn--sm { align-self: flex-start; }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      color: var(--on-dark);
+      overflow: hidden;
+      background: var(--surface-dark);
+    }
+    .hero__media { position: absolute; inset: 0; }
+    .hero__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.03);
+      animation: hero-settle 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero__shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(26, 27, 34, 0.55) 0%, rgba(30, 31, 40, 0.22) 40%, rgba(26, 27, 34, 0.9) 100%),
+        linear-gradient(90deg, rgba(87, 185, 220, 0.28) 0%, transparent 55%);
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 0 clamp(3rem, 8vw, 5rem);
+      animation: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .hero__logo {
+      margin: 0 0 1.5rem;
+      width: 100%;
+      background: var(--carbon);
+      padding: 0.85rem var(--gutter);
+    }
+    .hero__logo img {
+      width: min(100%, 18rem);
+      height: auto;
+    }
+    .hero__copy {
+      padding-inline: var(--gutter);
+      max-width: 42rem;
+    }
+    .hero__headline {
+      margin: 0 0 0.85rem;
+      font-size: clamp(2.25rem, 5.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--on-dark);
+      max-width: 14ch;
+    }
+    .hero__lede {
+      margin: 0 0 1.75rem;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--on-dark-soft);
+      max-width: 40ch;
+    }
+
+    /* —— Sections —— */
+    .section {
+      padding-block: var(--section);
+      background: var(--canvas);
+    }
+    .section--soft { background: var(--surface-soft); }
+    .section--dark {
+      background: var(--surface-dark);
+      color: var(--on-dark);
+    }
+
+    .section__eyebrow {
+      margin: 0 0 0.65rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .section--dark .section__eyebrow { color: var(--accent-on-dark); }
+
+    .section__title {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 18ch;
+    }
+    .section--dark .section__title { color: var(--on-dark); }
+
+    .section__lede {
+      margin: 0;
+      font-size: 1.0625rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 46ch;
+    }
+    .section--dark .section__lede { color: var(--on-dark-soft); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .section.is-in .reveal { opacity: 1; transform: none; }
+
+    /* —— Why —— */
+    .why-grid {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 1px;
+      background: var(--hairline);
+      border: 1px solid var(--hairline);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .why-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .why-item {
+      background: var(--surface-card);
+      padding: 1.5rem 1.35rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.9rem;
+      align-items: start;
+    }
+    .why-item svg {
+      width: 1.35rem;
+      height: 1.35rem;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.6;
+      margin-top: 0.1rem;
+    }
+    .why-item p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    /* —— Services —— */
+    .service-grid {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1040px) { .service-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface-card);
+      min-height: 100%;
+    }
+    .service-card__media {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--surface-strong);
+    }
+    .service-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+    .service-card:hover .service-card__media img { transform: scale(1.03); }
+    .service-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.25rem 1.15rem 1.35rem;
+      flex: 1;
+      background: var(--surface-card);
+    }
+    .service-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+    .service-card p {
+      margin: 0;
+      flex: 1;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* —— Work —— */
+    .work-grid {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px) { .work-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1040px) { .work-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .work-item {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface-dark);
+    }
+    .work-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+    .work-item:hover img { transform: scale(1.03); }
+    .work-item figcaption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 1.1rem 1rem;
+      background: linear-gradient(180deg, transparent, rgba(26, 33, 41, 0.92));
+      color: var(--on-dark);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    /* —— Reviews —— */
+    .reviews {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 900px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+
+    .review {
+      background: var(--surface-card);
+      border-top: 3px solid var(--primary);
+      padding: 1.75rem 1.5rem;
+    }
+    .review__stars {
+      margin: 0 0 0.85rem;
+      color: var(--primary);
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+    }
+    .review blockquote {
+      margin: 0 0 1rem;
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .review cite {
+      font-style: normal;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* —— About —— */
+    .about {
+      margin-top: 2.75rem;
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (min-width: 860px) {
+      .about { grid-template-columns: 0.9fr 1.1fr; gap: 3rem; }
+    }
+    .about__photo {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--surface-strong);
+    }
+    .about__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about__copy p {
+      margin: 0 0 1rem;
+      font-weight: 300;
+      color: var(--body);
+      max-width: 46ch;
+    }
+    .about__meta {
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+    }
+    .about__meta li {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--hairline);
+      color: var(--body);
+      font-weight: 300;
+    }
+    .about__meta strong {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* —— FAQ —— */
+    .faq {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--hairline);
+    }
+    .faq details { border-bottom: 1px solid var(--hairline); }
+    .faq summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.15rem 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .faq summary::after {
+      content: "+";
+      color: var(--primary);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p {
+      margin: 0 0 1.15rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 54ch;
+    }
+
+    /* —— Contact / quote (RR pattern, BMW chrome) —— */
+    .section--contact {
+      background: var(--surface-dark);
+      color: var(--on-dark);
+      padding-bottom: clamp(3.5rem, 8vw, 5.5rem);
+    }
+
+    .contact {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 2.25rem;
+      background: var(--surface-dark-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: clamp(1.6rem, 4vw, 2.6rem);
+    }
+    @media (min-width: 860px) {
+      .contact { grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    }
+
+    .contact__lead {
+      margin: 0.75rem 0 1.5rem;
+      font-weight: 300;
+      color: var(--on-dark-soft);
+      max-width: 36ch;
+    }
+    .contact__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .facts { margin: 0; display: grid; gap: 1.1rem; }
+    .facts dt {
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-on-dark);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    .facts dd {
+      margin: 0;
+      font-weight: 700;
+      color: var(--on-dark);
+    }
+    .facts a:hover,
+    .facts a:focus-visible { color: var(--primary); }
+
+    .form {
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+    }
+    .form__title {
+      margin: 0 0 0.25rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--on-dark);
+    }
+    .form__note {
+      margin: 0 0 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--on-dark-soft);
+    }
+    .form label {
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--on-dark-soft);
+    }
+    .form input,
+    .form textarea {
+      width: 100%;
+      padding: 0.85rem 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 0;
+      background: var(--surface-dark);
+      color: var(--on-dark);
+      font: inherit;
+      font-weight: 300;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+    .form input::placeholder,
+    .form textarea::placeholder { color: rgba(255, 255, 255, 0.35); }
+    .form input:focus,
+    .form textarea:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 1px;
+    }
+    .form .btn { justify-self: start; margin-top: 0.25rem; }
+
+    .form-status {
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .form-status.err { color: #ffb4b4; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* —— Footer —— */
+    .footer {
+      background: var(--carbon);
+      color: var(--muted);
+      padding: 4rem var(--gutter) 2rem;
+      border-top: 1px solid var(--hairline);
+    }
+    .footer__grid {
+      width: min(100%, var(--max));
+      margin-inline: auto;
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 800px) {
+      .footer__grid { grid-template-columns: 1.3fr 1fr 1fr 1fr; }
+    }
+    .footer__brand {
+      width: min(100%, 13rem);
+      margin-bottom: 0.85rem;
+      background: var(--carbon);
+      padding: 0.65rem 0.75rem;
+    }
+    .footer__brand img { width: 100%; height: auto; }
+    .footer h3 {
+      margin: 0 0 0.85rem;
+      color: var(--ink);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .footer ul { margin: 0; padding: 0; list-style: none; }
+    .footer li + li { margin-top: 0.5rem; }
+    .footer a,
+    .footer p,
+    .footer li {
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+    .footer a:hover,
+    .footer a:focus-visible { color: var(--primary); }
+    .footer__base {
+      width: min(100%, var(--max));
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      justify-content: space-between;
+    }
+
+    @keyframes hero-settle { to { transform: scale(1); } }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flow-forge-sample-bar" style="position:sticky;top:0;z-index:50;background:#e8953a;color:#0a0b0d;font:600 0.85rem/1.3 system-ui,sans-serif;padding:0.55rem 1rem;text-align:center;">
+    Sample Forge build by <a href="../../" style="color:inherit;font-weight:800;">Flow Forge</a> · not a live client site yet
+  </div>
+
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="Skies Electrical">
+      <img src="assets/logo.png" alt="Skies Electrical" width="180" height="42" />
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#why">Why us</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#quote">Quote</a>
+    </nav>
+    <a class="nav__call" href="tel:+447376862963">Call 07376 862963</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=2000&q=80"
+          alt=""
+          width="2000"
+          height="1333"
+        />
+        <div class="hero__shade"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__logo">
+          <img src="assets/logo.png" alt="Skies Electrical" width="446" height="105" />
+        </p>
+        <div class="hero__copy">
+          <h1 class="hero__headline">Reliable Electrical Services You Can Trust</h1>
+          <p class="hero__lede">From full rewires and consumer unit upgrades to fault finding and EV charger installations. Fast, professional service with free, no-obligation quotes.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="tel:+447376862963">Call Now</a>
+            <a class="btn btn--ghost" href="#quote">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">Why choose us</p>
+          <h2 class="section__title">Straightforward work, done properly</h2>
+          <p class="section__lede">Clear communication, tidy finishes, and paperwork you can rely on — across Carlisle and Cumbria.</p>
+        </div>
+        <div class="why-grid reveal">
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-2.8 7.8-7 9-4.2-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <p>Fully qualified &amp; insured</p>
+          </div>
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10M7 12h6M6 4h12a1 1 0 011 1v14l-3-2-3 2-3-2-3 2V5a1 1 0 011-1z"/></svg>
+            <p>Free quotations</p>
+          </div>
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            <p>Honest, transparent pricing</p>
+          </div>
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>
+            <p>Reliable &amp; punctual</p>
+          </div>
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l1.8-1.8a5 5 0 11-7.1-7.1l1.8 1.8z"/><path d="M9 15l-5 5M12 12l-2 2"/></svg>
+            <p>High-quality workmanship</p>
+          </div>
+          <div class="why-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-8h6v8"/></svg>
+            <p>Domestic &amp; commercial work</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="services">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">Services</p>
+          <h2 class="section__title">What we can help with</h2>
+          <p class="section__lede">From a single socket to a full rewire — priced clearly before we start.</p>
+        </div>
+        <div class="service-grid reveal">
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Consumer unit upgrades</h3>
+              <p>Modern boards with proper protection, clear labelling, and full certification.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Full &amp; partial rewires</h3>
+              <p>Safe, tidy rewires planned around how you use the property day to day.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Fault finding</h3>
+              <p>Tripping boards, dead circuits and intermittent issues diagnosed properly.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Additional sockets &amp; lighting</h3>
+              <p>Extra points, LED upgrades and lighting layouts that make the space work better.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Outdoor electrics</h3>
+              <p>Garden power, outdoor lighting and weather-rated installs done to regulation.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>EV charger installations</h3>
+              <p>Home charger installs with the right isolation, cable routes and paperwork.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>EICRs &amp; landlord certificates</h3>
+              <p>Accurate testing and certificates for sales, remortgages and rental compliance.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__media">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="675" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <h3>Commercial electrical work</h3>
+              <p>Light commercial installs, maintenance and planned works with clear scheduling.</p>
+              <a class="btn btn--outline btn--sm" href="#quote">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">Recent work</p>
+          <h2 class="section__title">Jobs finished across Cumbria</h2>
+          <p class="section__lede">Placeholder gallery for now — swap in real before/after photos when you have them.</p>
+        </div>
+        <div class="work-grid reveal">
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1000&q=80" alt="Modern kitchen ready for electrical work" width="1000" height="750" loading="lazy" />
+            <figcaption>Complete kitchen rewire — Carlisle</figcaption>
+          </figure>
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1000&q=80" alt="Consumer unit replacement" width="1000" height="750" loading="lazy" />
+            <figcaption>Consumer unit replacement — Scotby</figcaption>
+          </figure>
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=80" alt="EV charger installation" width="1000" height="750" loading="lazy" />
+            <figcaption>EV charger installation — Cumbria</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="reviews">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">Reviews</p>
+          <h2 class="section__title">What customers say</h2>
+          <p class="section__lede">Placeholder reviews for the mock — replace with live Google reviews when ready.</p>
+        </div>
+        <div class="reviews reveal">
+          <article class="review">
+            <p class="review__stars" aria-label="5 stars">★★★★★</p>
+            <blockquote>“Turned up on time, brilliant work and left everything spotless.”</blockquote>
+            <cite>Google review · Placeholder</cite>
+          </article>
+          <article class="review">
+            <p class="review__stars" aria-label="5 stars">★★★★★</p>
+            <blockquote>“Clear quote, no surprises, and the new board was labelled perfectly.”</blockquote>
+            <cite>Google review · Placeholder</cite>
+          </article>
+          <article class="review">
+            <p class="review__stars" aria-label="5 stars">★★★★★</p>
+            <blockquote>“Fault found the same day and explained in plain English. Would recommend.”</blockquote>
+            <cite>Google review · Placeholder</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">About</p>
+          <h2 class="section__title">A local electrician, not a call centre</h2>
+        </div>
+        <div class="about reveal">
+          <div class="about__photo">
+            <img
+              src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1000&q=80"
+              alt="Electrical tools — replace with Skies Electrical photo when ready"
+              width="1000"
+              height="1250"
+              loading="lazy"
+            />
+          </div>
+          <div class="about__copy">
+            <p>Skies Electrical is based near Scotby Close, Carlisle, providing reliable electrical work across Cumbria for homes and light commercial sites.</p>
+            <p>The approach is simple: listen first, quote clearly, turn up when promised, and leave the job tidy with the right certificates in place.</p>
+            <p>Replace this copy with years in business, qualifications, and a short note in their own words.</p>
+            <ul class="about__meta">
+              <li><strong>Based</strong><span>Scotby Close, Carlisle</span></li>
+              <li><strong>Covers</strong><span>Carlisle &amp; Cumbria</span></li>
+              <li><strong>Work</strong><span>Domestic &amp; light commercial</span></li>
+              <li><strong>Contact</strong><span>07376 862963</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">FAQs</p>
+          <h2 class="section__title">Common questions</h2>
+          <p class="section__lede">Quick answers before you call — tweak these once pricing and callout policy are confirmed.</p>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>How much do you charge?</summary>
+            <p>Every job is quoted individually after we understand the scope. Quotes are free and no-obligation, with pricing explained upfront before work starts.</p>
+          </details>
+          <details>
+            <summary>Do you offer emergency callouts?</summary>
+            <p>Yes where available — call 07376 862963 and we’ll advise on the soonest attendance. Confirm emergency cover wording with the client before publishing.</p>
+          </details>
+          <details>
+            <summary>Are you insured?</summary>
+            <p>Yes. Fully qualified and insured for the work carried out. Specific policy details can be provided on request.</p>
+          </details>
+          <details>
+            <summary>How quickly can you attend?</summary>
+            <p>Many jobs can be booked within a few days depending on diary space. Urgent faults are prioritised wherever possible.</p>
+          </details>
+          <details>
+            <summary>Do you provide certificates?</summary>
+            <p>Yes. Installation certificates, EICRs and landlord paperwork are issued as required for the work completed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="section__eyebrow">Contact</p>
+          <h2 class="section__title">Need an electrician?</h2>
+          <p class="section__lede">Get in touch today for a free, no-obligation quotation.</p>
+        </div>
+
+        <div class="contact reveal" id="quote">
+          <div class="contact__copy">
+            <p class="contact__lead">Prefer to talk it through? Call, WhatsApp, or send the form — we’ll come back with next steps.</p>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="tel:+447376862963">Call</a>
+              <a class="btn btn--ghost" href="https://wa.me/447376862963" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <dl class="facts">
+              <div>
+                <dt>Phone</dt>
+                <dd><a href="tel:+447376862963">07376 862963</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:skies.electrical.services@gmail.com">skies.electrical.services@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd>Scotby, Carlisle &amp; Cumbria</dd>
+              </div>
+              <div>
+                <dt>Instagram</dt>
+                <dd><a href="https://www.instagram.com/skies.electrical.services/" target="_blank" rel="noopener">@skies.electrical.services</a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <form class="form" id="quote-form" name="quote" action="#" method="POST">
+            <p class="form__title">Instant quote request</p>
+            <p class="form__note">Send your details and we’ll get back to you.</p>
+            <p class="sr-only">
+              <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+            <label>
+              Name
+              <input name="name" type="text" required autocomplete="name" />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" />
+            </label>
+            <label>
+              What do you need?
+              <textarea name="message" rows="4" required placeholder="e.g. consumer unit upgrade in Carlisle…"></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Send enquiry</button>
+            <p class="form-status" id="form-status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="Skies Electrical" width="224" height="53" />
+        </div>
+        <p>Reliable electrical services across Carlisle and Cumbria.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+447376862963">07376 862963</a></li>
+          <li><a href="mailto:skies.electrical.services@gmail.com">skies.electrical.services@gmail.com</a></li>
+          <li><a href="https://wa.me/447376862963" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Service areas</h3>
+        <ul>
+          <li>Scotby</li>
+          <li>Carlisle</li>
+          <li>Cumbria</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon–Fri · 08:00–18:00</li>
+          <li>Sat · by arrangement</li>
+          <li><a href="https://www.instagram.com/skies.electrical.services/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="year">2026</span> Skies Electrical</span>
+      <a href="#contact">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".section").forEach((el) => io.observe(el));
+
+    const form = document.getElementById("quote-form");
+    const status = document.getElementById("form-status");
+    const QUOTE_EMAIL = "skies.electrical.services@gmail.com";
+
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      if (String(fd.get("bot-field") || "").trim()) return;
+
+      const name = String(fd.get("name") || "").trim();
+      const phone = String(fd.get("phone") || "").trim();
+      const email = String(fd.get("email") || "").trim();
+      const message = String(fd.get("message") || "").trim();
+
+      if (!name || !message) {
+        status.hidden = false;
+        status.className = "form-status err";
+        status.textContent = "Please add your name and what you need.";
+        return;
+      }
+
+      const subject = encodeURIComponent(`Quote request — ${name}`);
+      const body = encodeURIComponent(
+        [
+          "New quote request from the Skies Electrical website",
+          "",
+          `Name: ${name}`,
+          `Phone: ${phone || "—"}`,
+          `Email: ${email || "—"}`,
+          "",
+          "What they need:",
+          message,
+        ].join("\n")
+      );
+
+      status.hidden = false;
+      status.className = "form-status";
+      status.textContent = "Opening your email…";
+      window.location.href = `mailto:${QUOTE_EMAIL}?subject=${subject}&body=${body}`;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
