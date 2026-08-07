@@ -192,9 +192,11 @@ h3 {
   width: 2.35rem;
   height: 2.35rem;
   border: 0;
-  outline: 0;
+  outline: none;
   box-shadow: none;
   background: transparent;
+  /* Drop the black square so only the emblem shows */
+  mix-blend-mode: lighten;
 }
 
 .wordmark__text {
@@ -338,16 +340,11 @@ h3 {
   }
 }
 
-.hero__mark img {
+/* Same file + same treatment as the top-left mark, just larger */
+.hero__mark .wordmark__mark {
   display: block;
   width: 100%;
   height: auto;
-  border: 0;
-  outline: 0;
-  box-shadow: none;
-  filter: none;
-  background: transparent;
-  /* Real metallic mark — no plate, no stroke */
 }
 
 .hero__place {
