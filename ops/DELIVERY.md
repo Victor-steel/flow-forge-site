@@ -3,18 +3,24 @@
 ## Packages (locked)
 | Package | Price | Scope |
 |--------|------:|-------|
-| Forge | £497 | 1–5 page site + chatbot + basic SEO + go-live |
-| Foundry | £1,797 | Forge + lead handoff automation + 30 days tweaks |
+| Forge | £497 one-off + £20/month | 1–5 page site + chatbot + basic SEO + go-live, then hosting, updates and small fixes |
+| Foundry | £297/month | Forge + lead handoff automation, kept running and monitored |
 
-Care plan: £49/month (hosting + small edits).
-Payment: 50% deposit to start, 50% on go-live.
-Revisions: 2 rounds included. Extra rounds billed.
+Forge payment: 50% deposit to start, 50% on go-live. The £20/month starts on go-live
+and covers hosting, updates and small fixes.
+
+Foundry payment: first month up front, then monthly, rolling. No setup fee. Cancel any
+time — they keep the site and the domain, the automation stops.
+
+Revisions: 2 rounds included on Forge. Foundry gets changes and new pages as needed
+while the subscription runs.
 
 ## First call (15–20 min)
 1. What do you sell / who buys?
 2. What should the site make people do (call, email, book)?
 3. Have logo/colours/photos? Domain?
-4. Recommend **Forge** (£497) by default; **Foundry** if they want lead follow-up automation.
+4. Recommend **Forge** (£497 + £20/month) by default; **Foundry** (£297/month) if they
+   want lead follow-up automation, or if the up-front cost is the blocker.
 5. Send deposit invoice same day.
 
 ## Client ownership (locked)
@@ -41,7 +47,7 @@ You keep design/layout changes; they keep day-to-day copy and gallery updates.
 - [ ] Chatbot live (if included)
 - [ ] Automation live (Foundry only)
 - [ ] Final invoice paid
-- [ ] Handover: `HANDOVER.md` + care plan offer
+- [ ] Handover: `HANDOVER.md` + £20/month maintenance set up (Forge)
 
 ## Out of scope (unless paid extra)
 - Custom app/software builds
