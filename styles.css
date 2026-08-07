@@ -367,8 +367,15 @@ h3 {
 .hero__mark {
   display: none;
   justify-self: end;
-  width: min(100%, 22rem);
+  width: min(100%, 20rem);
   animation: settle 1.2s var(--ease) both;
+  /* Soft amber bloom behind the flame — not a hard plate */
+  background: radial-gradient(
+    circle at 50% 55%,
+    rgba(232, 149, 58, 0.22) 0%,
+    rgba(232, 149, 58, 0.06) 42%,
+    transparent 68%
+  );
 }
 
 @media (min-width: 900px) {
@@ -378,7 +385,7 @@ h3 {
 .hero__mark img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 18px 40px rgba(10, 11, 13, 0.12));
+  display: block;
 }
 
 .spec {
