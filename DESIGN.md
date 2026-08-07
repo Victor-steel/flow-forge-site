@@ -10,9 +10,9 @@ Persuade landing for busy owners. Forge vernacular from the logo: charcoal, ambe
 
 | Token | Value |
 | --- | --- |
-| Canvas | `#f6f4f1` |
-| Surface | `#ffffff` |
-| Forge / inverse | `#0a0b0d` |
+| Canvas | `#0a0b0d` (full-page charcoal, logo ground) |
+| Surface | `#14161c` / `#1c1e26` elevated bands |
+| Ink | `#f4efe8` |
 | Amber CTA | `#e8953a` |
 | Ember hover | `#ff6a3d` |
 | Display | Syne 700/800 |
