@@ -313,14 +313,7 @@ h3 {
   display: grid;
   gap: 2rem;
   align-items: end;
-}
-
-@media (min-width: 900px) {
-  .hero__grid {
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 3rem;
-    align-items: center;
-  }
+  max-width: 46rem;
 }
 
 .hero__place {
@@ -370,28 +363,6 @@ h3 {
 
 .hero__copy .actions {
   animation: rise 900ms var(--ease) 200ms both;
-}
-
-.hero__mark {
-  display: block;
-  justify-self: start;
-  width: min(42vw, 11rem);
-  margin-top: 0.5rem;
-  animation: settle 1.2s var(--ease) both;
-}
-
-@media (min-width: 900px) {
-  .hero__mark {
-    justify-self: end;
-    width: min(100%, 18rem);
-    margin-top: 0;
-  }
-}
-
-.hero__mark img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .spec {
