@@ -449,6 +449,32 @@ h3 {
     var(--canvas);
 }
 
+/* Recent work and everything below: pure black field */
+#work,
+#work ~ .section,
+#work ~ .section.section--tint,
+#work ~ .section.section--steel,
+.footer {
+  background: #000000;
+  border-color: rgba(244, 239, 232, 0.1);
+}
+
+#work ~ .section.section--contact {
+  background:
+    radial-gradient(ellipse 60% 50% at 0% 100%, rgba(232, 149, 58, 0.12), transparent 55%),
+    #000000;
+}
+
+#work .work__item,
+#work ~ .section .tile,
+#work ~ .section .plan {
+  background: #0a0a0a;
+}
+
+#work ~ .section .plan--featured {
+  background: #111111;
+}
+
 /* —— Work —— */
 .work {
   margin-top: 2.5rem;
