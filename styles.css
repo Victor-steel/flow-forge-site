@@ -331,14 +331,22 @@ h3 {
 }
 
 .hero__brand {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   font-family: var(--display);
   font-weight: 800;
   font-size: clamp(3.2rem, 9vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 0.92;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink);
   max-width: none;
   animation: rise 900ms var(--ease) both;
+}
+
+.hero__brand-forge {
+  color: var(--amber);
 }
 
 .hero__headline {
