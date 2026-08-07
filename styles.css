@@ -312,8 +312,38 @@ h3 {
   position: relative;
   display: grid;
   gap: 2rem;
-  align-items: end;
-  max-width: 46rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1.2fr auto;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+}
+
+.hero__mark {
+  width: min(38vw, 10.5rem);
+  line-height: 0;
+}
+
+@media (min-width: 900px) {
+  .hero__mark {
+    width: min(100%, 15rem);
+    justify-self: end;
+  }
+}
+
+.hero__mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  filter: none;
+  background: transparent;
 }
 
 .hero__place {
