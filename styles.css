@@ -195,8 +195,6 @@ h3 {
   outline: none;
   box-shadow: none;
   background: transparent;
-  /* Drop the black square so only the emblem shows */
-  mix-blend-mode: lighten;
 }
 
 .wordmark__text {
@@ -317,37 +315,6 @@ h3 {
   position: relative;
   display: grid;
   gap: 2rem;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .hero__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(10rem, 14rem);
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: center;
-  }
-}
-
-.hero__mark {
-  width: min(42vw, 9.5rem);
-  line-height: 0;
-  justify-self: start;
-}
-
-@media (min-width: 900px) {
-  .hero__mark {
-    width: 100%;
-    max-width: 13.5rem;
-    justify-self: end;
-    align-self: center;
-  }
-}
-
-/* Same file + same treatment as the top-left mark, just larger */
-.hero__mark .wordmark__mark {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .hero__place {
@@ -355,6 +322,25 @@ h3 {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--muted);
+}
+
+/* Emblem + wordmark as one lockup — same mark as the nav */
+.hero__lockup {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2.5vw, 1.6rem);
+  animation: rise 900ms var(--ease) both;
+}
+
+.hero__emblem {
+  display: block;
+  width: clamp(4.75rem, 14vw, 8.5rem);
+  height: auto;
+  flex-shrink: 0;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 .hero__brand {
@@ -369,7 +355,6 @@ h3 {
   text-transform: uppercase;
   color: var(--ink);
   max-width: none;
-  animation: rise 900ms var(--ease) both;
 }
 
 .hero__brand-forge {
