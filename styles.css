@@ -467,12 +467,11 @@ h3 {
 
 #work .work__item,
 #work ~ .section .tile,
-#work ~ .section .plan {
-  background: #0a0a0a;
-}
-
-#work ~ .section .plan--featured {
-  background: #111111;
+#work ~ .section .plan,
+#work ~ .section .plan--featured,
+#work ~ .section .enquiry,
+#why .why li {
+  background: #1a1b20;
 }
 
 /* —— Work —— */
