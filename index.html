@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=36" />
+    <link rel="stylesheet" href="./styles.css?v=37" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -426,6 +426,10 @@
               <input name="phone" type="tel" autocomplete="tel" required />
             </label>
             <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
               How can I help?
               <textarea name="need" rows="4" required placeholder="Website, automation, or both, plus a short note about your business."></textarea>
             </label>
@@ -490,10 +494,11 @@
           const data = new FormData(form);
           const name = String(data.get("name") || "").trim();
           const phone = String(data.get("phone") || "").trim();
+          const email = String(data.get("email") || "").trim();
           const need = String(data.get("need") || "").trim();
-          if (!name || !phone || !need) {
+          if (!name || !phone || !email || !need) {
             status.hidden = false;
-            status.textContent = "Fill in name, phone and what you need.";
+            status.textContent = "Fill in name, phone, email and what you need.";
             return;
           }
 
