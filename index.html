@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=37" />
+    <link rel="stylesheet" href="./styles.css?v=38" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -485,6 +485,7 @@
 
     <script>
       (() => {
+      const MAKE_HOOK = "https://hook.eu1.make.com/6c1f1zkymyl1ibn12cyafxltbdnal0ni";
       const form = document.getElementById("enquiry-form");
       const status = document.getElementById("enquiry-status");
       if (form && status) {
@@ -506,13 +507,30 @@
           status.textContent = "Sending…";
           if (submitBtn) submitBtn.disabled = true;
 
+          const makePayload = {
+            name,
+            phone,
+            email,
+            need,
+            source: "withflowforge.com",
+            timestamp: new Date().toISOString(),
+          };
+
           try {
-            const res = await fetch(form.action, {
+            const formspreeRes = await fetch(form.action, {
               method: "POST",
               body: data,
               headers: { Accept: "application/json" },
             });
-            if (!res.ok) throw new Error("Formspree error");
+            if (!formspreeRes.ok) throw new Error("Formspree error");
+
+            // Best-effort: Sheet + auto-reply via Make (don't fail the enquiry if Make is off)
+            fetch(MAKE_HOOK, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(makePayload),
+            }).catch(() => {});
+
             form.reset();
             status.textContent = "Thanks — your enquiry is through. I’ll be in touch soon.";
           } catch {
