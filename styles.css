@@ -1,6 +1,6 @@
 /*
   Flow Forge — serious logo-led system
-  Cool charcoal + restrained amber. Public Sans throughout.
+  Cool charcoal + restrained amber. IBM Plex Sans throughout.
 */
 
 :root {
@@ -21,8 +21,8 @@
   --inverse-muted: #b8b0a4;
   --box: #262320;
 
-  --display: "Public Sans", system-ui, -apple-system, sans-serif;
-  --sans: "Public Sans", system-ui, -apple-system, sans-serif;
+  --display: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --max: 72rem;
   --gutter: clamp(1.25rem, 4vw, 3rem);
@@ -59,6 +59,23 @@ body {
   font-size: 1.0625rem;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+h1,
+h2,
+h3,
+h4,
+.btn,
+.plan__price,
+.spec dd,
+.wordmark__text,
+.hero__brand {
+  font-family: var(--sans) !important;
 }
 
 ::selection {
@@ -108,16 +125,16 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.85rem, 4vw, 3rem);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  max-width: 18ch;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
 }
 
 h3 {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
@@ -155,7 +172,7 @@ h3 {
 
 .link--lg {
   font-size: 1.2rem;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   border-bottom-width: 2px;
 }
@@ -200,11 +217,11 @@ h3 {
 .wordmark__text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
+  line-height: 1.05;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -230,7 +247,7 @@ h3 {
 }
 
 .nav__phone {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
@@ -264,7 +281,7 @@ h3 {
   border-radius: 0;
   background: var(--amber);
   color: var(--amber-ink);
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
@@ -347,11 +364,11 @@ h3 {
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(2.85rem, 7.5vw, 5.25rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6.5vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
   color: var(--ink);
   max-width: none;
@@ -413,7 +430,7 @@ h3 {
 
 .spec dd {
   margin: 0;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 1.35rem;
   color: var(--ink);
@@ -497,7 +514,7 @@ h3 {
   padding: 0.55rem 0.85rem;
   background: var(--amber);
   color: var(--ink);
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 0.8rem;
 }
@@ -512,7 +529,7 @@ h3 {
 }
 
 .work__roof-label {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 800;
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
   color: var(--inverse);
@@ -576,7 +593,7 @@ h3 {
 }
 
 .why strong {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-size: 1.15rem;
 }
 
@@ -689,7 +706,7 @@ h3 {
 
 .plan__price {
   margin: 0.25rem 0 0;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 800;
   font-size: clamp(2.4rem, 5vw, 3.25rem);
   letter-spacing: -0.03em;
@@ -762,7 +779,7 @@ h3 {
 
 .steps__num {
   display: block;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 800;
   font-size: 2rem;
   color: var(--amber);
@@ -790,7 +807,7 @@ h3 {
   cursor: pointer;
   list-style: none;
   padding: 1.15rem 0;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--ink);

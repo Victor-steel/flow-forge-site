@@ -15,8 +15,8 @@ Persuade landing for busy owners. Forge vernacular from the logo: charcoal, ambe
 | Ink | `#f4efe8` |
 | Amber CTA | `#e8953a` |
 | Ember hover | `#ff6a3d` |
-| Display | Public Sans 700/800 |
-| Body | Public Sans 400/500/600 |
+| Display | IBM Plex Sans 600/700 |
+| Body | IBM Plex Sans 400/500/600 |
 
 ## Rules
 
