@@ -930,6 +930,14 @@ h3 {
   margin-top: 0.35rem;
 }
 
+.enquiry__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .enquiry__status {
   margin: 0;
   font-size: 0.875rem;
