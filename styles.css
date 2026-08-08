@@ -5,21 +5,21 @@
 
 :root {
   /* Workshop charcoal — warm ground, cream type, amber flame */
-  --canvas: #1a1816;
-  --surface: #211f1c;
-  --surface-steel: #242220;
+  --canvas: #262320;
+  --surface: #2e2b27;
+  --surface-steel: #322f2a;
   --ink: #f4efe8;
   --ink-soft: #e8e2d8;
   --muted: #b8b0a4;
-  --hairline: rgba(244, 239, 232, 0.12);
-  --forge: #141210;
+  --hairline: rgba(244, 239, 232, 0.14);
+  --forge: #1e1c19;
   --amber: #e8953a;
   --ember: #ff6a3d;
-  --amber-ink: #1a1816;
+  --amber-ink: #1e1c19;
   --gold-text: #e8953a;
   --inverse: #f4efe8;
   --inverse-muted: #b8b0a4;
-  --box: #262320;
+  --box: #35322d;
 
   --display: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -182,7 +182,7 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(26, 24, 22, 0.94);
+  background: rgba(38, 35, 32, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--hairline);
 }
@@ -324,7 +324,7 @@ h3 {
   inset: 0;
   background:
     radial-gradient(ellipse 50% 40% at 85% 20%, rgba(232, 149, 58, 0.12), transparent 55%),
-    linear-gradient(180deg, #221e1a 0%, var(--canvas) 72%);
+    linear-gradient(180deg, #2e2a25 0%, var(--canvas) 72%);
   pointer-events: none;
 }
 

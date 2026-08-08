@@ -10,8 +10,8 @@ Persuade landing for busy owners. Forge vernacular from the logo: charcoal, ambe
 
 | Token | Value |
 | --- | --- |
-| Canvas | `#1a1816` warm charcoal (not void black) |
-| Surface / boxes | `#12141a` / `#1c1e26` |
+| Canvas | `#262320` warm charcoal (not void black) |
+| Surface / boxes | `#2e2b27` / `#35322d` |
 | Ink | `#f4efe8` |
 | Amber CTA | `#e8953a` |
 | Ember hover | `#ff6a3d` |
