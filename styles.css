@@ -1,6 +1,6 @@
 /*
   Flow Forge — serious logo-led system
-  Cool charcoal + restrained amber. Syne / Public Sans. Minimal glow.
+  Cool charcoal + restrained amber. Public Sans throughout.
 */
 
 :root {
@@ -21,7 +21,7 @@
   --inverse-muted: #b8b0a4;
   --box: #262320;
 
-  --display: Syne, "Avenir Next", system-ui, sans-serif;
+  --display: "Public Sans", system-ui, -apple-system, sans-serif;
   --sans: "Public Sans", system-ui, -apple-system, sans-serif;
 
   --max: 72rem;
@@ -348,10 +348,10 @@ h3 {
   flex-direction: column;
   margin: 0;
   font-family: var(--display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(2.85rem, 7.5vw, 5.25rem);
   line-height: 0.95;
-  letter-spacing: 0.08em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--ink);
   max-width: none;
